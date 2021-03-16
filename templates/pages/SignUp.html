@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+<div class="container my-3">
+<h3 class="my-3">SignUp with firebase auth</h3>
+    <form action="signUpCredentials" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" />
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" />
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" />
+        </div>
+        <div>
+            <input type="submit" value="SignUp" class="btn btn-success">
+        </div>
+    </form>
+</div>
+{% endblock body %}
